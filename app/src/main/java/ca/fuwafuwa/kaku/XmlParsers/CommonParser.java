@@ -10,9 +10,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import ca.fuwafuwa.kaku.Database.JmDictDatabase.JmDatabaseHelper;
-import ca.fuwafuwa.kaku.Database.KanjiDict2Database.Kd2DatabaseHelper;
 import ca.fuwafuwa.kaku.XmlParsers.JmDict.JmParser;
-import ca.fuwafuwa.kaku.XmlParsers.KanjiDict2.Kd2Parser;
 
 /**
  * Created by 0xbad1d3a5 on 4/25/2016.

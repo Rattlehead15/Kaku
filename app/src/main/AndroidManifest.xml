@@ -14,64 +14,6 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/ads_app_id" />
-
-        <receiver android:name=".MainService$CloseMainService" />
-        <receiver android:name=".MainService$TogglePageModeMainService" />
-        <receiver android:name=".MainService$ToggleInstantModeMainService" />
-        <receiver android:name=".MainService$ToggleImagePreviewMainService" />
-        <receiver android:name=".MainService$ToggleShowHideMainService" />
-
-        <activity
-            android:name=".MainActivity"
-            android:label="Kaku"
-            android:noHistory="false"
-            android:launchMode="standard"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".BetaActivity"
-            android:label="Kaku Beta"
-            android:noHistory="false"
-            android:launchMode="standard"
-            android:screenOrientation="portrait">
-        </activity>
-
-        <activity
-            android:name=".TutorialActivity"
-            android:label="Kaku Tutorial"
-            android:noHistory="false"
-            android:launchMode="standard"
-            android:screenOrientation="portrait">
-        </activity>
-
-        <activity
-            android:name=".PassthroughActivity"
-            android:label="Kaku"
-            android:launchMode="singleInstance"
-            android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.PROCESS_TEXT" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/plain" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/plain" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name=".MainService"
-            android:exported="true" />
     </application>
 
 </manifest>

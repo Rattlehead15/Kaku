@@ -20,10 +20,8 @@ import ca.fuwafuwa.kaku.Database.DatabaseHelper;
 import ca.fuwafuwa.kaku.Database.DbHelperFactory;
 import ca.fuwafuwa.kaku.Database.IDatabaseHelper;
 import ca.fuwafuwa.kaku.Database.JmDictDatabase.JmDatabaseHelper;
-import ca.fuwafuwa.kaku.Database.KanjiDict2Database.Kd2DatabaseHelper;
 import ca.fuwafuwa.kaku.XmlParsers.Interfaces.DictParser;
 import ca.fuwafuwa.kaku.XmlParsers.JmDict.JmParser;
-import ca.fuwafuwa.kaku.XmlParsers.KanjiDict2.Kd2Parser;
 
 /**
  * Created by 0xbad1d3a5 on 12/1/2016.
@@ -48,7 +46,6 @@ public class ParserRunnable implements Runnable {
         try
         {
             parseDictionary(JmDatabaseHelper.class, JmParser.class, "JMdict_e.xml");
-            parseDictionary(Kd2DatabaseHelper.class, Kd2Parser.class, "kanjidic2.xml");
         } catch (Exception e)
         {
             e.printStackTrace();

@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 import ca.fuwafuwa.kaku.Database.JmDictDatabase.Models.EntryOptimized;
-import ca.fuwafuwa.kaku.Database.KanjiDict2Database.Models.CharacterOptimized;
 
 /**
  * Created by 0xbad1d3a5 on 8/28/2016.

@@ -33,7 +33,6 @@ import ca.fuwafuwa.kaku.Database.JmDictDatabase.Models.Reading;
 import ca.fuwafuwa.kaku.Database.JmDictDatabase.Models.ReadingIrregularity;
 import ca.fuwafuwa.kaku.Database.JmDictDatabase.Models.ReadingPriority;
 import ca.fuwafuwa.kaku.Database.JmDictDatabase.Models.ReadingRestriction;
-import ca.fuwafuwa.kaku.Exceptions.NotImplementedException;
 import ca.fuwafuwa.kaku.KakuTools;
 
 /**
@@ -76,7 +75,11 @@ public class JmDatabaseHelper extends DatabaseHelper {
     @Override
     public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion) {
         // Can't use onUpgrade, because getDbDao() will sometimes run first due to being on another thread, opening a DB connection and causing issues when we try to delete the DB
-        throw new NotImplementedException();
+        try {
+            throw new Exception();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void deleteDatabase(){
